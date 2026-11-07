@@ -91,4 +91,4 @@ npm run format
 
 ## Automation Test Recording
 
-[Watch the full test run]([./recordings/all-automation-tests.mov](https://github.com/maidzola/test_transjakarta/issues/1)
+[Watch the full automation test recording]([URL_VIDEO_DARI_GITHUB](https://github.com/maidzola/test_transjakarta/issues/1))
