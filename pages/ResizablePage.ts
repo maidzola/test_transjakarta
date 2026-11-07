@@ -30,30 +30,9 @@ export class ResizablePage {
     await this.page.mouse.down();
     await this.page.mouse.move(
       startX + width - box.width,
-      startY + (heightDelta === 0 ? 1 : heightDelta),
-      { steps: 10 },
+      startY + heightDelta,
     );
     await this.page.mouse.up();
-
-    if (heightDelta === 0) {
-      const resizedBox = await this.resizableBox.boundingBox();
-      const resizedHandle = await this.resizeHandle.boundingBox();
-
-      if (!resizedBox || !resizedHandle) {
-        throw new Error("Resizable box or its handle is not visible");
-      }
-
-      const resizedStartX = resizedHandle.x + resizedHandle.width / 2;
-      const resizedStartY = resizedHandle.y + resizedHandle.height / 2;
-      await this.page.mouse.move(resizedStartX, resizedStartY);
-      await this.page.mouse.down();
-      await this.page.mouse.move(
-        resizedStartX + width - resizedBox.width,
-        resizedStartY + height - resizedBox.height,
-        { steps: 5 },
-      );
-      await this.page.mouse.up();
-    }
   }
 
   async dimensions(): Promise<{ width: number; height: number }> {
