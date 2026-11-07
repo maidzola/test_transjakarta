@@ -27,7 +27,11 @@ test("mengisi dan mengirim Student Registration Form", async ({ page }) => {
   await expect(registration.confirmationModal).toContainText(student.email);
   await expect(registration.confirmationModal).toContainText("Female");
   await expect(registration.confirmationModal).toContainText(student.mobile);
-  await expect(registration.confirmationModal).toContainText("English");
+  await expect(registration.confirmationModal).toContainText(
+    student.dateOfBirth.replace(/ (\d{4})$/, ",$1"),
+  );
+  await expect(registration.confirmationModal).toContainText(student.subject);
+  await expect(registration.confirmationModal).toContainText("Reading");
   await expect(registration.confirmationModal).toContainText(student.address);
   await expect(registration.confirmationModal).toContainText(
     `${student.state} ${student.city}`,

@@ -12,10 +12,9 @@ test("menambahkan semua user dari CSV ke Web Tables", async ({ page }) => {
     await webTables.addUser(user);
     await expect(webTables.rowFor(user)).toContainText(user.firstName);
     await expect(webTables.rowFor(user)).toContainText(user.lastName);
-  }
-
-  for (const user of users) {
     await expect(webTables.rowFor(user)).toContainText(user.email);
+    await expect(webTables.rowFor(user)).toContainText(user.age);
+    await expect(webTables.rowFor(user)).toContainText(user.salary);
     await expect(webTables.rowFor(user)).toContainText(user.department);
   }
 });
