@@ -91,4 +91,7 @@ npm run format
 
 ## Automation Test Recording
 
-[Watch the full automation test recording]([URL_VIDEO_DARI_GITHUB](https://github.com/maidzola/test_transjakarta/issues/1))
+
+
+https://github.com/user-attachments/assets/9dd9e107-d15c-4553-8983-ff4907a696e2
+
