@@ -6,11 +6,16 @@ Playwright end-to-end tests for the DemoQA practice pages, written in TypeScript
 
 Before running the tests, make sure Node.js, npm, and Java are installed. Java is required to run the Allure command-line report.
 
-After cloning the repository, install the project dependencies and Playwright's Chromium browser:
+After cloning the repository, install the project dependencies:
 
 ```bash
 npm install
-npx playwright install chromium
+```
+
+Then install Playwright's browser binaries. This downloads Chromium, Firefox, and WebKit:
+
+```bash
+npx playwright install
 ```
 
 Allure's Playwright reporter and command-line tool are included in the project dependencies, so you do not need to install Allure globally. The `npm install` command installs them locally from `package.json`.
