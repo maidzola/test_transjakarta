@@ -87,3 +87,8 @@ npm run format
 - `tests/`: Playwright scenarios and assertions
 - `data/`: test data, including the Web Tables CSV
 - `utils/`: shared helpers, such as the CSV reader
+
+
+## Automation Test Recording
+
+[Watch the full test run]([./recordings/all-automation-tests.mov](https://github.com/maidzola/test_transjakarta/issues/1)
